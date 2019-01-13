@@ -32,7 +32,7 @@ public class MazeApplication {
         root.put("result", resultNumber);
         root.put("table", mg.getTableForTemplate(table));
 
-        Configuration cfg = HtmlRender.createConfig();
+        Configuration cfg = new HtmlRender().createConfig();
         Template template = cfg.getTemplate("maze-temp.ftl");
 
         Writer out = new OutputStreamWriter(new FileOutputStream(FILE_NAME));

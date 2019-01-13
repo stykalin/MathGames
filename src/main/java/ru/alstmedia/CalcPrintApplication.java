@@ -24,7 +24,7 @@ public class CalcPrintApplication {
         root.put("col3MaxNum", col3MaxNum);
         root.put("col4MaxNum", col4MaxNum);
 
-        Configuration cfg = HtmlRender.createConfig();
+        Configuration cfg = new HtmlRender().createConfig();
         Template template = cfg.getTemplate("calc-template.ftl");
 
         Writer out = new OutputStreamWriter(new FileOutputStream(FILE_NAME));
